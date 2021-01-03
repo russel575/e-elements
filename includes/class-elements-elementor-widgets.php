@@ -1,6 +1,6 @@
 <?php
 
-final class Elementor_Test_Extension {
+final class Ee_Elementor_Extension {
 
     /**
      * Plugin Version
@@ -37,7 +37,7 @@ final class Elementor_Test_Extension {
      * @access private
      * @static
      *
-     * @var Elementor_Test_Extension The single instance of the class.
+     * @var Ee_Elementor_Extension The single instance of the class.
      */
     private static $_instance = null;
     
@@ -51,7 +51,7 @@ final class Elementor_Test_Extension {
      * @access public
      * @static
      *
-     * @return Elementor_Test_Extension An instance of the class.
+     * @return Ee_Elementor_Extension An instance of the class.
      */
     public static function instance() {
     
@@ -88,7 +88,7 @@ final class Elementor_Test_Extension {
      */
     public function i18n() {
     
-        load_plugin_textdomain( 'elementor-test-extension' );
+        load_plugin_textdomain( 'e-elements' );
     
     }
     
@@ -221,9 +221,9 @@ final class Elementor_Test_Extension {
     
         $message = sprintf(
             /* translators: 1: Plugin name 2: Elementor */
-            esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'elementor-test-extension' ),
-            '<strong>' . esc_html__( 'Elementor Test Extension', 'elementor-test-extension' ) . '</strong>',
-            '<strong>' . esc_html__( 'Elementor', 'elementor-test-extension' ) . '</strong>'
+            esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'e-elements' ),
+            '<strong>' . esc_html__( 'eElements', 'e-elements' ) . '</strong>',
+            '<strong>' . esc_html__( 'Elementor', 'e-elements' ) . '</strong>'
         );
     
         printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
@@ -245,9 +245,9 @@ final class Elementor_Test_Extension {
     
         $message = sprintf(
             /* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
-            esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'elementor-test-extension' ),
-            '<strong>' . esc_html__( 'Elementor Test Extension', 'elementor-test-extension' ) . '</strong>',
-            '<strong>' . esc_html__( 'Elementor', 'elementor-test-extension' ) . '</strong>',
+            esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'e-elements' ),
+            '<strong>' . esc_html__( 'eElements', 'e-elements' ) . '</strong>',
+            '<strong>' . esc_html__( 'Elementor', 'e-elements' ) . '</strong>',
              self::MINIMUM_ELEMENTOR_VERSION
         );
     
@@ -270,9 +270,9 @@ final class Elementor_Test_Extension {
     
         $message = sprintf(
             /* translators: 1: Plugin name 2: PHP 3: Required PHP version */
-            esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'elementor-test-extension' ),
-            '<strong>' . esc_html__( 'Elementor Test Extension', 'elementor-test-extension' ) . '</strong>',
-            '<strong>' . esc_html__( 'PHP', 'elementor-test-extension' ) . '</strong>',
+            esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'e-elements' ),
+            '<strong>' . esc_html__( 'eElements', 'e-elements' ) . '</strong>',
+            '<strong>' . esc_html__( 'PHP', 'e-elements' ) . '</strong>',
              self::MINIMUM_PHP_VERSION
         );
     
@@ -282,4 +282,4 @@ final class Elementor_Test_Extension {
     
     }
     
-    Elementor_Test_Extension::instance();
+    Ee_Elementor_Extension::instance();
